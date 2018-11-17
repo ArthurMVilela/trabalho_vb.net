@@ -8,7 +8,7 @@
             MsgBox("Não existe um usuário com este nome")
         Else
             If rs.Fields("senha").Value = senha Then
-                'MsgBox("Logado com sucesso")
+                MsgBox("Logado com sucesso")
 
                 usuario.id = rs.Fields("id").Value
                 usuario.nome = rs.Fields("nome").Value
