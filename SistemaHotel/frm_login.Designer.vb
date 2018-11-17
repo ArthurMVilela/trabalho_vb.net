@@ -27,6 +27,9 @@ Partial Class frm_login
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_senha = New System.Windows.Forms.TextBox()
         Me.btn_entrar = New System.Windows.Forms.Button()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.lbl_erros = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txt_nome
@@ -76,11 +79,26 @@ Partial Class frm_login
         Me.btn_entrar.Text = "Entrar"
         Me.btn_entrar.UseVisualStyleBackColor = True
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lbl_erros})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 439)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(334, 22)
+        Me.StatusStrip1.TabIndex = 5
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'lbl_erros
+        '
+        Me.lbl_erros.Name = "lbl_erros"
+        Me.lbl_erros.Size = New System.Drawing.Size(0, 17)
+        '
         'frm_login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(334, 461)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.btn_entrar)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txt_senha)
@@ -93,6 +111,8 @@ Partial Class frm_login
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         Me.TopMost = True
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -103,4 +123,6 @@ Partial Class frm_login
     Friend WithEvents Label2 As Label
     Friend WithEvents txt_senha As TextBox
     Friend WithEvents btn_entrar As Button
+    Friend WithEvents StatusStrip1 As StatusStrip
+
 End Class
