@@ -4,8 +4,17 @@
         Dim usuario As New Usuario
 
         Me.Enabled = False
-        login.Show()
-        Me.Enabled = True
+        login.ShowDialog()
+        usuario = login.usuario
+
+        If usuario.id <> -1 Then
+            Me.Enabled = True
+        Else
+            Application.Exit()
+        End If
+
+        'barra de status
+        lbl_usuario.Text = "USUÁRIO: " & usuario.nome
     End Sub
 
     Private Sub menu_btn_sair_Click(sender As Object, e As EventArgs) Handles menu_btn_sair.Click

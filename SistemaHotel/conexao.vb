@@ -13,4 +13,9 @@
             MsgBox("Conexão com banco de dados falhou.", MsgBoxStyle.Information, "AVISO")
         End Try
     End Sub
+
+    Sub consultarDb(query As String)
+        sql = query
+        rs = db.Execute(sql)
+    End Sub
 End Module
