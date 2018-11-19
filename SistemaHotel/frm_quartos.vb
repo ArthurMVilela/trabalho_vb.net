@@ -4,6 +4,7 @@
     Public cliente As Cliente
     Dim resp
 
+
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
@@ -21,6 +22,15 @@
             .Items.Add("Reforma")
             .Items.Add("Limpesa")
         End With
+
+        'preencher o datagrid
+        Dim ds As New DataSet
+        Dim dt As New DataTable
+        ds.Tables.Add(dt)
+        Dim da As New OleDb.OleDbDataAdapter("SELECT numero,status FROM quartos", db.ConnectionString)
+        da.Fill(dt)
+
+        dgv_quartos.DataSource = dt.DefaultView
 
     End Sub
 
@@ -57,6 +67,17 @@
                     txt_nome_cliente.Text = ""
                     txt_acompanhantes.Text = ""
                 End If
+
+                'preencher o datagrid
+                Dim ds As New DataSet
+                Dim dt As New DataTable
+                ds.Tables.Add(dt)
+                Dim da As New OleDb.OleDbDataAdapter("SELECT itens_quarto.qtde, itens.desc FROM itens_quarto  
+                                                        INNER JOIN itens ON itens_quarto.id_item = itens.id 
+                                                        WHERE itens_quarto.id_quarto = " & quarto.id & ";", db.ConnectionString)
+                da.Fill(dt)
+
+                dgv_itens.DataSource = dt.DefaultView
             Else 'quarto não exite
                 MsgBox("Não existe um quarto cadastrado com este número", MsgBoxStyle.Exclamation, "ATENÇÃO")
                 txt_andar.Text = ""

@@ -4,6 +4,7 @@
     Public sql As String
     Public conexao = Application.StartupPath & "\db\db.mdb"
 
+
     Sub conectarDb()
         Try
             db = CreateObject("ADODB.Connection")
@@ -11,6 +12,7 @@
 
         Catch ex As Exception
             MsgBox("Conexão com banco de dados falhou.", MsgBoxStyle.Information, "AVISO")
+            MsgBox(ex.Message, MsgBoxStyle.Information, "AVISO")
         End Try
     End Sub
 

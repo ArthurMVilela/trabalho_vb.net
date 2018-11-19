@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frm_quartos
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frm_quartos
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -45,9 +45,6 @@ Partial Class frm_quartos
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.dgv_itens = New System.Windows.Forms.DataGridView()
-        Me.cod = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.desc_item = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.qtde = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_andar = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -55,24 +52,26 @@ Partial Class frm_quartos
         Me.btn_buscar = New System.Windows.Forms.Button()
         Me.txt_numero = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.dgv_quartos = New System.Windows.Forms.DataGridView()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Camas.SuspendLayout()
         CType(Me.dgv_itens, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
+        CType(Me.dgv_quartos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Location = New System.Drawing.Point(12, 54)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(947, 574)
+        Me.TabControl1.Size = New System.Drawing.Size(899, 512)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -95,7 +94,7 @@ Partial Class frm_quartos
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(939, 548)
+        Me.TabPage1.Size = New System.Drawing.Size(891, 486)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Consultar Quarto"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -300,28 +299,10 @@ Partial Class frm_quartos
         'dgv_itens
         '
         Me.dgv_itens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_itens.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cod, Me.desc_item, Me.qtde})
         Me.dgv_itens.Location = New System.Drawing.Point(425, 34)
         Me.dgv_itens.Name = "dgv_itens"
         Me.dgv_itens.Size = New System.Drawing.Size(451, 254)
         Me.dgv_itens.TabIndex = 13
-        '
-        'cod
-        '
-        Me.cod.HeaderText = "código"
-        Me.cod.Name = "cod"
-        '
-        'desc_item
-        '
-        Me.desc_item.HeaderText = "descrição"
-        Me.desc_item.Name = "desc_item"
-        Me.desc_item.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.desc_item.Width = 200
-        '
-        'qtde
-        '
-        Me.qtde.HeaderText = "quantidade"
-        Me.qtde.Name = "qtde"
         '
         'Label4
         '
@@ -388,30 +369,30 @@ Partial Class frm_quartos
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Número"
         '
-        'TabPage2
-        '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(939, 548)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Cadastrar Quartos"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.dgv_quartos)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(939, 548)
+        Me.TabPage3.Size = New System.Drawing.Size(891, 486)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Administrar Quartos"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'dgv_quartos
+        '
+        Me.dgv_quartos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_quartos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgv_quartos.Location = New System.Drawing.Point(0, 0)
+        Me.dgv_quartos.Name = "dgv_quartos"
+        Me.dgv_quartos.Size = New System.Drawing.Size(891, 486)
+        Me.dgv_quartos.TabIndex = 0
         '
         'frm_quartos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(963, 640)
+        Me.ClientSize = New System.Drawing.Size(899, 512)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "frm_quartos"
         Me.Text = "frm_quartos"
@@ -423,13 +404,14 @@ Partial Class frm_quartos
         Me.Camas.ResumeLayout(False)
         Me.Camas.PerformLayout()
         CType(Me.dgv_itens, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
+        CType(Me.dgv_quartos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage2 As TabPage
     Friend WithEvents dgv_itens As DataGridView
     Friend WithEvents Label4 As Label
     Friend WithEvents txt_andar As TextBox
@@ -456,10 +438,8 @@ Partial Class frm_quartos
     Friend WithEvents Label10 As Label
     Friend WithEvents txt_cod_cliente As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents cod As DataGridViewTextBoxColumn
-    Friend WithEvents desc_item As DataGridViewTextBoxColumn
-    Friend WithEvents qtde As DataGridViewTextBoxColumn
     Friend WithEvents Button2 As Button
     Friend WithEvents btn_cadastrar As Button
     Friend WithEvents btn_consultar_cliente As Button
+    Friend WithEvents dgv_quartos As DataGridView
 End Class
