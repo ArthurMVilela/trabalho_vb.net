@@ -105,10 +105,11 @@ Partial Class frm_login
         Me.Controls.Add(Me.txt_senha)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txt_nome)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frm_login"
+        Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"

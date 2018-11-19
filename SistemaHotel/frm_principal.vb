@@ -3,6 +3,9 @@
         Dim login As New frm_login
         Dim usuario As New Usuario
 
+        conectarDb()
+
+
         Me.Enabled = False
         login.ShowDialog()
         usuario = login.usuario
@@ -25,6 +28,17 @@
         If resp = vbYes Then
             Application.Exit()
         End If
+
+    End Sub
+
+    Private Sub menu_btn_gerenciar_quarto_Click(sender As Object, e As EventArgs) Handles menu_btn_gerenciar_quarto.Click
+        Dim f As New frm_quartos
+        f.Show()
+
+    End Sub
+
+    Private Sub frm_principal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        fecharConexao()
 
     End Sub
 End Class
