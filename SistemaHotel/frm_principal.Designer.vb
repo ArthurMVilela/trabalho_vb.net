@@ -27,6 +27,12 @@ Partial Class frm_principal
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ArquivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menu_btn_sair = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AtendimentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckinCheckoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuartosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.menu_btn_gerenciar_quarto = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RelatóriosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.barra_status.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -48,7 +54,7 @@ Partial Class frm_principal
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArquivoToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArquivoToolStripMenuItem, Me.AtendimentoToolStripMenuItem, Me.QuartosToolStripMenuItem, Me.RelatóriosToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -59,14 +65,52 @@ Partial Class frm_principal
         '
         Me.ArquivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menu_btn_sair})
         Me.ArquivoToolStripMenuItem.Name = "ArquivoToolStripMenuItem"
-        Me.ArquivoToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.ArquivoToolStripMenuItem.Text = "Arquivo"
+        Me.ArquivoToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
+        Me.ArquivoToolStripMenuItem.Text = "Aplicação"
         '
         'menu_btn_sair
         '
         Me.menu_btn_sair.Name = "menu_btn_sair"
         Me.menu_btn_sair.Size = New System.Drawing.Size(180, 22)
         Me.menu_btn_sair.Text = "Sair"
+        '
+        'AtendimentoToolStripMenuItem
+        '
+        Me.AtendimentoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReservasToolStripMenuItem, Me.CheckinCheckoutToolStripMenuItem})
+        Me.AtendimentoToolStripMenuItem.Name = "AtendimentoToolStripMenuItem"
+        Me.AtendimentoToolStripMenuItem.Size = New System.Drawing.Size(89, 20)
+        Me.AtendimentoToolStripMenuItem.Text = "Atendimento"
+        '
+        'ReservasToolStripMenuItem
+        '
+        Me.ReservasToolStripMenuItem.Name = "ReservasToolStripMenuItem"
+        Me.ReservasToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.ReservasToolStripMenuItem.Text = "Reservas"
+        '
+        'CheckinCheckoutToolStripMenuItem
+        '
+        Me.CheckinCheckoutToolStripMenuItem.Name = "CheckinCheckoutToolStripMenuItem"
+        Me.CheckinCheckoutToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.CheckinCheckoutToolStripMenuItem.Text = "Check-in/Check-out"
+        '
+        'QuartosToolStripMenuItem
+        '
+        Me.QuartosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menu_btn_gerenciar_quarto})
+        Me.QuartosToolStripMenuItem.Name = "QuartosToolStripMenuItem"
+        Me.QuartosToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.QuartosToolStripMenuItem.Text = "Quartos"
+        '
+        'menu_btn_gerenciar_quarto
+        '
+        Me.menu_btn_gerenciar_quarto.Name = "menu_btn_gerenciar_quarto"
+        Me.menu_btn_gerenciar_quarto.Size = New System.Drawing.Size(180, 22)
+        Me.menu_btn_gerenciar_quarto.Text = "Gerenciar Quartos"
+        '
+        'RelatóriosToolStripMenuItem
+        '
+        Me.RelatóriosToolStripMenuItem.Name = "RelatóriosToolStripMenuItem"
+        Me.RelatóriosToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
+        Me.RelatóriosToolStripMenuItem.Text = "Relatórios"
         '
         'frm_principal
         '
@@ -94,4 +138,10 @@ Partial Class frm_principal
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ArquivoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents menu_btn_sair As ToolStripMenuItem
+    Friend WithEvents AtendimentoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReservasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CheckinCheckoutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QuartosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents menu_btn_gerenciar_quarto As ToolStripMenuItem
+    Friend WithEvents RelatóriosToolStripMenuItem As ToolStripMenuItem
 End Class

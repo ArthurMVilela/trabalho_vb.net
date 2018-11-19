@@ -18,4 +18,17 @@
         sql = query
         rs = db.Execute(sql)
     End Sub
+
+    Sub executarCmdDb(query As String)
+        db.Execute(query)
+    End Sub
+
+    Sub fecharConexao()
+        Try
+            db.Close()
+
+        Catch ex As Exception
+            MsgBox("Falha ao fechar conexão com banco de dado.", MsgBoxStyle.Information, "AVISO")
+        End Try
+    End Sub
 End Module
