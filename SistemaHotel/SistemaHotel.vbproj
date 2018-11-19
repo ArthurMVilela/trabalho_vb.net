@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.vb" />
     <Compile Include="conexao.vb" />
     <Compile Include="controleLogin.vb" />
     <Compile Include="controleQuartos.vb" />

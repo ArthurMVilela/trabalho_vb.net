@@ -19,6 +19,10 @@
         rs = db.Execute(sql)
     End Sub
 
+    Sub executarCmdDb(query As String)
+        db.Execute(query)
+    End Sub
+
     Sub fecharConexao()
         Try
             db.Close()
